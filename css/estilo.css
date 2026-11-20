@@ -1,0 +1,197 @@
+/* CONASIFE 2026 · Programa y Memorias · estilo común
+   Autor: José Antonio Castillo Torres · © 2026 Instituto Politécnico Nacional */
+:root {
+  --guinda:#6C1D45; --guinda-osc:#4E1432; --dorado:#B38E5D; --rosa:#F2EEF0; --rosa2:#F8F5F6;
+  --gris:#58595B; --linea:#D9D2D6; --texto:#222; --fondo:#fff;
+  --ponencias:#6C1D45; --magistral:#B38E5D; --workshop:#2F5D7C; --microtaller:#3E7B4F;
+  --ceremonia:#7A4E8C; --registro:#58595B; --receso:#BDB6BA;
+}
+* { box-sizing:border-box; }
+html, body { margin:0; }
+html { scroll-padding-top:70px; }
+body { font-family:"Times New Roman", Times, serif; color:var(--texto); background:var(--fondo); font-size:18px; line-height:1.5; }
+a { color:var(--guinda); }
+button, input, select { font-family:inherit; font-size:1rem; }
+.franja { height:6px; background:var(--guinda); }
+.ancho { max-width:1180px; margin:0 auto; padding:0 20px; }
+.logos { display:flex; align-items:center; gap:18px; padding:18px 0 10px; }
+.logos img { height:58px; width:auto; }
+.logos .sep { width:1px; height:46px; background:var(--linea); }
+.logos .fin { margin-left:auto; }
+
+/* barra de navegación */
+nav.barra { position:sticky; top:0; z-index:20; background:var(--guinda); }
+nav.barra .ancho { display:flex; gap:4px; flex-wrap:wrap; }
+nav.barra a { color:#fff; text-decoration:none; padding:12px 16px; font-size:1.02rem; }
+nav.barra a:hover { background:var(--guinda-osc); }
+nav.barra a.activo { background:#fff; color:var(--guinda); font-weight:bold; }
+
+h1 { color:var(--guinda); line-height:1.12; }
+h2 { color:var(--guinda); font-size:1.7rem; margin:0 0 6px; }
+h3 { color:var(--guinda); margin:0 0 6px; }
+.sub { font-size:1.2rem; color:var(--gris); margin:0 0 16px; }
+.intro { color:var(--gris); margin:0 0 20px; }
+section { padding:32px 0; border-top:1px solid var(--linea); }
+.pend { color:var(--dorado); font-style:italic; }
+.aviso { background:var(--rosa); padding:12px 16px; margin:14px 0; }
+.borrador { display:inline-block; background:var(--dorado); color:#fff; padding:2px 10px; font-size:.9rem; letter-spacing:.03em; }
+
+/* botones */
+.boton { display:inline-flex; justify-content:space-between; align-items:center; gap:14px; background:var(--guinda); color:#fff;
+  text-decoration:none; padding:11px 16px; border:1px solid var(--guinda); cursor:pointer; }
+.boton:hover { background:var(--guinda-osc); }
+.boton.claro { background:#fff; color:var(--guinda); }
+.boton.claro:hover { background:var(--rosa); }
+.boton .peso { opacity:.85; font-size:.9rem; white-space:nowrap; }
+.boton.chico { padding:5px 10px; font-size:.92rem; }
+
+/* portada (index) */
+.portada { display:grid; grid-template-columns:1.15fr 1fr; gap:36px; align-items:center; padding:24px 0 38px; }
+.portada h1 { font-size:2.5rem; margin:0 0 12px; }
+.portada .datos { color:var(--guinda); font-weight:bold; margin:0 0 18px; }
+.cifras { display:flex; gap:26px; flex-wrap:wrap; margin:18px 0 0; }
+.cifras div { border-left:3px solid var(--dorado); padding-left:10px; }
+.cifras b { display:block; font-size:1.8rem; color:var(--guinda); line-height:1; }
+.cifras span { color:var(--gris); font-size:.95rem; }
+.portadas { display:flex; gap:18px; justify-content:center; }
+.portadas img { width:46%; border:1px solid var(--linea); box-shadow:0 8px 24px rgba(108,29,69,.15); }
+.tarjetas { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+.tarjeta { border:1px solid var(--linea); padding:22px; display:grid; grid-template-columns:140px 1fr; gap:20px; }
+.tarjeta img { width:100%; border:1px solid var(--linea); }
+.tarjeta .acciones { display:flex; flex-direction:column; gap:8px; margin-top:12px; }
+.tarjeta p { margin:0 0 6px; color:var(--gris); }
+.funciones { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+.funciones div { background:var(--rosa2); padding:16px; border-top:3px solid var(--guinda); }
+.funciones b { color:var(--guinda); }
+
+/* pestañas */
+.pestanas { display:flex; gap:6px; flex-wrap:wrap; border-bottom:2px solid var(--guinda); margin:18px 0 22px; }
+.pestanas button { background:#fff; border:1px solid var(--linea); border-bottom:none; padding:9px 16px; cursor:pointer; color:var(--guinda); }
+.pestanas button[aria-selected="true"] { background:var(--guinda); color:#fff; border-color:var(--guinda); }
+.panel[hidden] { display:none; }
+
+/* buscador */
+.buscar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:16px; }
+.buscar input[type=search] { flex:1 1 320px; padding:11px 14px; border:1px solid var(--guinda); font-size:1.05rem; }
+.buscar select { padding:10px; border:1px solid var(--linea); background:#fff; max-width:100%; min-width:0; }
+.conteo { color:var(--gris); font-size:.95rem; }
+mark { background:#F6E7C8; padding:0 1px; }
+
+/* programa: días */
+.dias { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.dias button { border:1px solid var(--guinda); background:#fff; color:var(--guinda); padding:9px 16px; cursor:pointer; }
+.dias button[aria-pressed="true"] { background:var(--guinda); color:#fff; }
+.linea-tiempo { border-left:3px solid var(--linea); margin-left:68px; }
+.bloque { position:relative; padding:10px 0 14px 18px; }
+.bloque .hora { position:absolute; left:-80px; top:10px; width:66px; text-align:right; font-weight:bold; color:var(--guinda); font-size:.98rem; }
+.bloque::before { content:""; position:absolute; left:-9px; top:16px; width:13px; height:13px; border-radius:50%; background:var(--c, var(--guinda)); border:2px solid #fff; }
+.bloque .tit { font-weight:bold; font-size:1.08rem; }
+.bloque .lugar { color:var(--gris); font-size:.95rem; }
+.bloque.receso { padding-top:4px; padding-bottom:6px; color:var(--gris); font-size:.95rem; }
+.bloque.receso .tit { font-weight:normal; font-style:italic; }
+.bloque.receso .hora { font-weight:normal; color:var(--gris); top:4px; }
+.bloque.receso::before { top:9px; width:9px; height:9px; left:-7px; }
+.bloque.ahora { background:linear-gradient(90deg, #FFF6E6, transparent); }
+.etiqueta { display:inline-block; font-size:.78rem; color:#fff; background:var(--c, var(--guinda)); padding:1px 8px; margin-right:6px; vertical-align:2px; text-transform:uppercase; letter-spacing:.04em; }
+.detalle { margin-top:6px; color:var(--texto); }
+.aulas { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:10px; }
+.aula { border:1px solid var(--linea); background:#fff; }
+.aula h4 { margin:0; background:var(--guinda); color:#fff; padding:6px 10px; font-size:1rem; }
+.aula .eje { padding:6px 10px 0; font-size:.88rem; color:var(--guinda); font-weight:bold; }
+.aula .mod { padding:0 10px 6px; font-size:.85rem; color:var(--gris); border-bottom:1px solid var(--rosa); }
+.pon { padding:8px 10px; border-bottom:1px solid var(--rosa); font-size:.93rem; position:relative; }
+.pon:last-child { border-bottom:none; }
+.pon .h { font-weight:bold; color:var(--guinda); font-size:.88rem; }
+.pon .t { font-weight:bold; line-height:1.25; margin:2px 0; }
+.pon .a { color:var(--gris); font-size:.86rem; line-height:1.3; }
+.pon .mod-v { font-size:.75rem; color:var(--workshop); border:1px solid var(--workshop); padding:0 5px; margin-left:4px; }
+.pon a.ver { font-size:.85rem; }
+.estrella { background:none; border:none; cursor:pointer; font-size:1.25rem; line-height:1; color:#C9BFC4; padding:0 2px; float:right; }
+.estrella[aria-pressed="true"] { color:var(--dorado); }
+
+/* tablas de resultados */
+table.lista { width:100%; border-collapse:collapse; font-size:.97rem; }
+table.lista th { text-align:left; background:var(--guinda); color:#fff; padding:8px 10px; font-weight:normal; position:sticky; top:46px; }
+table.lista td { padding:8px 10px; border-bottom:1px solid var(--linea); vertical-align:top; }
+table.lista tr:nth-child(even) td { background:var(--rosa2); }
+table.lista td.cuando { white-space:nowrap; color:var(--guinda); font-weight:bold; }
+
+.fichas { display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
+.ficha { border:1px solid var(--linea); padding:16px 18px; border-top:4px solid var(--c, var(--guinda)); }
+.ficha .cuando { color:var(--guinda); font-weight:bold; }
+.ficha p { margin:6px 0; }
+
+/* memorias */
+.memorias { display:grid; grid-template-columns:270px 1fr; gap:28px; align-items:start; }
+.lateral { position:sticky; top:62px; border:1px solid var(--linea); padding:14px; max-height:calc(100vh - 80px); overflow:auto; }
+.lateral h3 { font-size:1.05rem; }
+.lateral button { display:flex; justify-content:space-between; gap:8px; width:100%; text-align:left; background:none; border:none; padding:7px 6px; cursor:pointer; color:var(--texto); border-bottom:1px solid var(--rosa); line-height:1.25; }
+.lateral button:hover { background:var(--rosa2); }
+.lateral button[aria-pressed="true"] { background:var(--rosa); color:var(--guinda); font-weight:bold; }
+.lateral .n { color:var(--gris); font-size:.9rem; }
+.trabajo { border:1px solid var(--linea); margin-bottom:14px; }
+.trabajo summary { list-style:none; cursor:pointer; padding:14px 16px; }
+.trabajo summary::-webkit-details-marker { display:none; }
+.trabajo summary:hover { background:var(--rosa2); }
+.trabajo[open] summary { background:var(--rosa); }
+.trabajo .clave { font-size:.85rem; color:var(--dorado); font-weight:bold; letter-spacing:.03em; }
+.trabajo .t { font-size:1.15rem; font-weight:bold; color:var(--guinda); line-height:1.25; margin:3px 0; }
+.trabajo .a { color:var(--texto); font-size:.98rem; }
+.trabajo .mas { padding:4px 18px 16px; }
+.trabajo .ads { font-size:.9rem; color:var(--gris); font-style:italic; margin:4px 0 10px; }
+.trabajo .resumen { text-align:justify; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.chip { border:1px solid var(--guinda); color:var(--guinda); background:#fff; padding:2px 10px; font-size:.88rem; cursor:pointer; border-radius:12px; }
+.chip:hover { background:var(--rosa); }
+.acciones-t { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.presenta { background:var(--rosa2); border-left:3px solid var(--dorado); padding:6px 12px; margin:10px 0; font-size:.95rem; }
+.indice-autores { columns:3; column-gap:30px; }
+.indice-autores div { break-inside:avoid; padding:3px 0; font-size:.96rem; }
+.indice-autores .letra { font-weight:bold; color:var(--guinda); font-size:1.2rem; margin-top:10px; border-bottom:1px solid var(--linea); }
+.indice-autores button { background:none; border:none; color:var(--guinda); cursor:pointer; padding:0 2px; text-decoration:underline; font-size:.9rem; }
+.ejes-lista h3 { margin-top:18px; }
+.ejes-lista ol { margin:4px 0 0; }
+.grupo { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+.grupo div { background:var(--rosa2); padding:12px 14px; }
+.grupo b { color:var(--guinda); display:block; margin-bottom:4px; }
+.solo-movil { display:none; }
+.copiado { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--guinda); color:#fff; padding:10px 18px; z-index:50; }
+
+footer { border-top:1px solid var(--linea); padding:26px 20px 36px; color:var(--gris); font-size:.92rem; margin-top:30px; }
+footer .creditos { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:14px; }
+footer b { color:var(--guinda); }
+
+@media (max-width:980px) {
+  .aulas { grid-template-columns:repeat(2, 1fr); }
+  .memorias { grid-template-columns:1fr; }
+  .lateral { display:none; }
+  .solo-movil { display:block; flex:1 1 100%; width:100%; }
+  .indice-autores { columns:2; }
+}
+@media (max-width:860px) {
+  .portada, .tarjetas, .funciones, footer .creditos, .fichas, .grupo { grid-template-columns:1fr; }
+  .portada h1 { font-size:2rem; }
+  .logos img { height:44px; }
+}
+@media (max-width:560px) {
+  body { font-size:17px; }
+  .ancho { padding:0 16px; }
+  .aulas { grid-template-columns:1fr; }
+  .tarjeta { grid-template-columns:90px 1fr; gap:14px; padding:16px; }
+  .linea-tiempo { margin-left:0; border-left:none; }
+  .bloque { padding-left:0; }
+  .bloque .hora { position:static; display:block; width:auto; text-align:left; }
+  .bloque::before { display:none; }
+  .indice-autores { columns:1; }
+  table.lista th { position:static; }
+  table.lista, table.lista tbody, table.lista tr, table.lista td { display:block; }
+  table.lista thead { display:none; }
+  table.lista tr { border-bottom:2px solid var(--linea); padding:6px 0; }
+  table.lista td { border:none; padding:2px 6px; }
+  nav.barra a { padding:10px 11px; }
+  .logos .sep { display:none; }
+}
+@media print {
+  nav.barra, .pestanas, .buscar, .estrella, .lateral, .acciones-t, footer .creditos { display:none !important; }
+  .memorias { grid-template-columns:1fr; }
+}

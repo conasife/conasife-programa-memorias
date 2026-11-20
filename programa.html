@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programa · CONASIFE 2026</title>
+<meta name="description" content="Programa interactivo del 1er Congreso Nacional de Sistemas Ferroviarios: horario por día, ubica tu ponencia, talleres y agenda personal.">
+<link rel="icon" href="img/conasife.png?v=4d07eb8a">
+<link rel="stylesheet" href="css/estilo.css?v=86ec4175">
+</head>
+<body>
+<div class="franja"></div>
+<header class="ancho">
+  <div class="logos">
+    <img src="img/ipn.png?v=b9242096" alt="Instituto Politécnico Nacional">
+    <span class="sep"></span>
+    <img src="img/upiip.png?v=c9acc29b" alt="UPIIP Campus Palenque">
+    <img class="fin" src="img/conasife.png?v=4d07eb8a" alt="1er Congreso Nacional de Sistemas Ferroviarios">
+  </div>
+</header>
+<nav class="barra" aria-label="Secciones">
+  <div class="ancho">
+    <a href="index.html" >Inicio</a>
+    <a href="programa.html" class="activo">Programa</a>
+    <a href="memorias.html" >Memorias</a>
+    <a href="index.html#descargas">Descargas PDF</a>
+  </div>
+</nav>
+<main class="ancho">
+  <h1 style="font-size:2.2rem;margin:22px 0 6px">Programa del congreso</h1>
+  <p class="sub" id="p-sub"></p>
+  <div class="pestanas" role="tablist">
+    <button data-panel="dia">Por día</button>
+    <button data-panel="ubica">Ubica tu ponencia</button>
+    <button data-panel="talleres">Magistrales y talleres</button>
+    <button data-panel="agenda">Mi agenda <span id="n-fav"></span></button>
+    <button data-panel="info">Bienvenida y comités</button>
+  </div>
+
+  <div class="panel" id="dia" role="tabpanel">
+    <div class="dias" id="dias"></div>
+    <div id="linea"></div>
+  </div>
+
+  <div class="panel" id="ubica" role="tabpanel" hidden>
+    <div class="buscar">
+      <input type="search" id="q-pon" placeholder="Apellido, palabra del título o folio…" aria-label="Buscar ponencia">
+      <select id="f-dia" aria-label="Día"><option value="">Todos los días</option></select>
+      <select id="f-aula" aria-label="Aula"><option value="">Todas las aulas</option></select>
+      <span class="conteo" id="c-pon"></span>
+    </div>
+    <table class="lista"><thead><tr><th>Cuándo y dónde</th><th>Trabajo</th><th>Autores</th><th></th></tr></thead><tbody id="t-pon"></tbody></table>
+  </div>
+
+  <div class="panel" id="talleres" role="tabpanel" hidden>
+    <h2>Conferencias magistrales</h2>
+    <div class="fichas" id="l-mag"></div>
+    <h2 style="margin-top:28px">Workshops con la industria</h2>
+    <div class="fichas" id="l-ws"></div>
+    <h2 style="margin-top:28px">Microtalleres</h2>
+    <p class="intro" id="h-micro"></p>
+    <div class="fichas" id="l-micro"></div>
+  </div>
+
+  <div class="panel" id="agenda" role="tabpanel" hidden>
+    <p class="intro">Marque con ★ las actividades y ponencias que quiere ver. Se guardan solo en este navegador.</p>
+    <div class="buscar">
+      <button class="boton chico" id="b-ics">Descargar a mi calendario (.ics)</button>
+      <button class="boton chico claro" id="b-imp" onclick="window.print()">Imprimir</button>
+      <button class="boton chico claro" id="b-borrar">Vaciar mi agenda</button>
+    </div>
+    <div id="l-agenda"></div>
+  </div>
+
+  <div class="panel" id="info" role="tabpanel" hidden>
+    <div id="bienvenida"></div>
+    <h2 style="margin-top:24px">Comités</h2>
+    <div class="grupo" id="comites"></div>
+  </div>
+</main>
+<footer>
+  <div class="ancho">
+    <div class="creditos">
+      <div><b>Autor</b><br>José Antonio Castillo Torres</div>
+      <div><b>Revisores</b><br>Julio César Vergara Vázquez<br>Carlos Alberto Cazabal Nájera</div>
+      <div><b>Revisora de estilo e imagen institucional</b><br>Alexa Georgina Isidro López</div>
+    </div>
+    © 2026 Instituto Politécnico Nacional, UPIIP. · Comité organizador: <a href="mailto:conasife@ipn.mx">conasife@ipn.mx</a> · <a href="https://github.com/conasife/conasife-programa-memorias">github.com/conasife</a>
+  </div>
+</footer>
+<script src="js/datos.js?v=fe96a734"></script>
+<script src="js/comun.js?v=7879fe49"></script>
+<script src="js/programa.js?v=1809a811"></script>
+</body>
+</html>
