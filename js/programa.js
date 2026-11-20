@@ -78,7 +78,8 @@
     if (a.tipo === "workshop" && workshop[a.detalle]) {
       var w = workshop[a.detalle];
       return '<div class="detalle"><i>' + txt(w.exposicion) + "</i> · " + txt(w.empresa) +
-        "<br>Coordina: " + esc(w.coordina) + (w.cultural ? " · Actividad cultural: " + txt(w.cultural) : "") + "</div>";
+        "<br>Coordina: " + esc(w.coordina) + (w.cultural ? " · Actividad cultural: " + txt(w.cultural) : "") +
+        (w.ponencia ? "<br>Incluye el trabajo en extenso folio " + String(w.ponencia.folio).padStart(3, "0") + ": <i>" + txt(w.ponencia.titulo) + "</i> " + enlaceMemorias(w.ponencia) : "") + "</div>";
     }
     if (a.tipo === "ponencias") {
       var ses = sesionesDe(a.dia, a.inicio);
@@ -127,13 +128,18 @@
     var b = e.target.closest("[data-dia]");
     if (!b) return;
     diaActual = +b.getAttribute("data-dia");
-    pintaDias(); pintaLinea();
+    if (P.aclaracion) $("ubica-nota").textContent = P.aclaracion;
+  pintaDias(); pintaLinea();
   });
 
   // ---------------------------------------------------------- ubica tu ponencia
   var todas = [];
   P.sesiones.forEach(function (s) {
     s.ponencias.forEach(function (p) { todas.push({ p: p, s: s }); });
+  });
+  // Trabajos que se presentan dentro de un workshop (p. ej. folio 12 en el Workshop II)
+  P.workshops.forEach(function (w) {
+    if (w.ponencia) todas.push({ p: w.ponencia, s: { sesion: w.clave, dia: w.dia, aula: w.lugar + " (" + w.nombre + ")", nombre: w.nombre, ponencias: [w.ponencia] } });
   });
   todas.sort(function (x, y) { return C.norm(x.p.titulo).localeCompare(C.norm(y.p.titulo), "es"); });
   P.dias.forEach(function (d) { $("f-dia").insertAdjacentHTML("beforeend", '<option value="' + d.dia + '">' + esc(d.nombre) + "</option>"); });
@@ -149,7 +155,7 @@
       var base = [x.p.titulo, x.p.folio, x.p.clave, x.s.nombre, x.p.autores.map(function (a) { return a.nombre + " " + (a.inst || []).join(" "); }).join(" ")].join(" ");
       return C.coincide(base, q);
     });
-    $("c-pon").textContent = res.length + " de " + todas.length + " ponencias";
+    $("c-pon").textContent = res.length + " de " + todas.length + " trabajos";
     $("t-pon").innerHTML = res.map(function (x) {
       return "<tr><td class=\"cuando\">" + esc(nombreDia[x.s.dia]) + "<br>" + esc(x.p.inicio) + "–" + esc(x.p.fin) + "<br>" + esc(x.s.aula) +
         (C.norm(x.p.modalidad) === "virtual" ? ' <span class="mod-v">en línea</span>' : "") + "</td>" +
@@ -173,6 +179,8 @@
         '<div class="cuando">' + esc(w.nombre) + " · " + esc(nombreDia[w.dia]) + ", " + esc(w.inicio) + "–" + esc(w.fin) + "</div>" +
         "<h3>" + txt(w.exposicion) + "</h3><p><b>" + txt(w.empresa) + "</b> · Coordina: " + esc(w.coordina) + "</p>" +
         (w.resumen ? "<p>" + txt(w.resumen) + "</p>" : "") +
+        (w.ponencia ? '<p class="presenta"><b>Trabajo en extenso (folio ' + String(w.ponencia.folio).padStart(3, "0") + "):</b> " + txt(w.ponencia.titulo) +
+          "<br>" + autores(w.ponencia.autores, true) + " " + enlaceMemorias(w.ponencia) + "</p>" : "") +
         (w.cultural ? "<p>Actividad cultural: " + txt(w.cultural) + "</p>" : "") +
         '<p class="lugar">' + txt(w.lugar) + "</p></div>";
     }).join("");
@@ -279,6 +287,7 @@
   var d0 = P.datos;
   $("p-sub").innerHTML = esc(d0.fechas) + " · " + esc(d0.sede) + " · " + esc(d0.modalidad) +
     (d0.estado === "borrador" ? ' <span class="borrador">' + esc(d0.version || "Versión preliminar") + "</span>" : "");
+  if (P.aclaracion) $("ubica-nota").textContent = P.aclaracion;
   pintaDias(); pintaLinea(); pintaUbica(); pintaTalleres(); pintaAgenda(); pintaInfo(); contador();
   var activa = C.pestanas(document.querySelector(".pestanas"));
   document.addEventListener("click", function (e) {

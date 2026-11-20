@@ -39,7 +39,8 @@
     }).join("<br>");
     var pr = t.presentacion;
     var presenta = pr ? '<div class="presenta"><b>Se presenta:</b> ' + esc(pr.dia_nombre) + ", " + esc(pr.inicio) + "–" + esc(pr.fin) +
-      ", " + esc(pr.aula) + ' · <a href="programa.html#ubica">Ver en el programa</a></div>' : "";
+      ", " + esc(pr.aula) + (pr.workshop ? ", dentro del " + esc(pr.workshop) : "") +
+      ' · <a href="programa.html#' + (pr.workshop ? "talleres" : "ubica") + '">Ver en el programa</a></div>' : "";
     var pdf = D.pdf.memorias + (t.pagina_pdf ? "#page=" + t.pagina_pdf : "");
     return '<details class="trabajo" id="' + t.clave + '"' + (q ? " open" : "") + ">" +
       "<summary>" +
@@ -191,6 +192,7 @@
   var L = M.libro;
   $("m-sub").innerHTML = esc(M.totales.trabajos) + " trabajos · " + esc(M.totales.autores) + " autoras y autores · " +
     esc(L.fechas) + " · " + esc(L.lugar) + ' · <a href="' + esc(D.pdf.memorias) + '" download>Descargar PDF</a>';
+  if (M.aclaracion) $("m-nota").textContent = M.aclaracion;
   filtraEjes(); pinta(); pintaAutores(); pintaEjes(); pintaPresentacion();
   var activa = C.pestanas(document.querySelector(".pestanas"));
   var h = decodeURIComponent(location.hash.slice(1));
