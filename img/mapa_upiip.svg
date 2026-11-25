@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 598" font-family="'Times New Roman', Times, serif" role="img" aria-label="Sedes del CONASIFE 2026 en la UPIIP">
+<title>Sedes del CONASIFE 2026 en la UPIIP</title>
+<rect width="660" height="598" fill="#FFFFFF"/>
+<polyline points="300,196 345,330 352,470" fill="none" stroke="#C9C2C6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="345,330 400,305" fill="none" stroke="#C9C2C6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="10,120 170,132 170,182 10,168" fill="#E6E1E4" stroke="#58595B" stroke-width="1.2"/>
+<polygon points="170,140 335,140 335,196 170,196" fill="#E6E1E4" stroke="#58595B" stroke-width="1.2"/>
+<text x="92" y="152" font-size="9" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(-4 92 152)">Aulas 15 a 17</text>
+<polygon points="140,258 322,266 320,306 138,296" fill="#E6E1E4" stroke="#58595B" stroke-width="1.2"/>
+<text x="230" y="284" font-size="9" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(2 230 284)">Edificio de aulas 2A</text>
+<polygon points="30,262 70,268 200,362 355,364 355,410 190,410 25,302" fill="#E6E1E4" stroke="#58595B" stroke-width="1.2"/>
+<text x="240" y="390" font-size="9" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 240 390)">Aulas 31 a 37</text>
+<polygon points="352,248 482,178 500,206 368,278" fill="#E6E1E4" stroke="#58595B" stroke-width="1.2"/>
+<polygon points="408,238 438,222 446,236 416,252" fill="#F1E6D6" stroke="#B38E5D" stroke-width="1.2"/>
+<polygon points="440,221 470,205 478,219 448,235" fill="#F1E6D6" stroke="#B38E5D" stroke-width="1.2"/>
+<polygon points="388,318 590,232 604,262 402,350" fill="#E6E1E4" stroke="#58595B" stroke-width="1.2"/>
+<text x="500" y="288" font-size="9" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(-23 500 288)">Edificio de Gobierno</text>
+<polygon points="455,350 560,312 650,330 650,465 470,465 440,410" fill="#B38E5D" stroke="#B38E5D" stroke-width="1.2"/>
+<text x="548" y="395" font-size="15" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 548 395)" font-weight="bold">AUDITORIO</text>
+<polygon points="174,166 212,166 212,194 174,194" fill="#6C1D45" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="193" y="180" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 193 180)" font-weight="bold">14PB</text>
+<polygon points="174,142 212,142 212,164 174,164" fill="#EBD9E2" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="193" y="153" font-size="7" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 193 153)">14PA</text>
+<polygon points="214,166 252,166 252,194 214,194" fill="#6C1D45" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="233" y="180" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 233 180)" font-weight="bold">13PB</text>
+<polygon points="214,142 252,142 252,164 214,164" fill="#EBD9E2" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="233" y="153" font-size="7" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 233 153)">13PA</text>
+<polygon points="254,166 292,166 292,194 254,194" fill="#6C1D45" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="273" y="180" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 273 180)" font-weight="bold">12PB</text>
+<polygon points="254,142 292,142 292,164 254,164" fill="#EBD9E2" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="273" y="153" font-size="7" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 273 153)">12PA</text>
+<polygon points="294,166 332,166 332,194 294,194" fill="#6C1D45" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="313" y="180" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 313 180)" font-weight="bold">11PB</text>
+<polygon points="294,142 332,142 332,164 294,164" fill="#EBD9E2" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="313" y="153" font-size="7" fill="#58595B" text-anchor="middle" dominant-baseline="middle" transform="rotate(0 313 153)">11PA</text>
+<text x="427" y="237" font-size="7" fill="#6C1D45" text-anchor="middle" dominant-baseline="middle" transform="rotate(-28 427 237)" font-weight="bold">Lab. 1</text>
+<text x="459" y="220" font-size="7" fill="#6C1D45" text-anchor="middle" dominant-baseline="middle" transform="rotate(-28 459 220)" font-weight="bold">Lab. 2</text>
+<circle cx="254" cy="112" r="11" fill="#6C1D45" stroke="#FFFFFF" stroke-width="2"/><text x="254" y="112" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">1</text>
+<circle cx="548" cy="352" r="11" fill="#B38E5D" stroke="#FFFFFF" stroke-width="2"/><text x="548" y="352" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">2</text>
+<circle cx="440" cy="190" r="11" fill="#B38E5D" stroke="#FFFFFF" stroke-width="2"/><text x="440" y="190" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">3</text>
+<line x1="10" y1="476" x2="650" y2="476" stroke="#6C1D45" stroke-width="1"/>
+<circle cx="24" cy="506" r="9" fill="#6C1D45"/><text x="24" y="506" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">1</text><text x="42" y="510" font-size="13" fill="#6C1D45" font-weight="bold">Presentaciones de trabajos en extenso</text><text x="290" y="510" font-size="12" fill="#58595B">Aulas 11PB, 12PB, 13PB y 14PB (planta baja)</text>
+<circle cx="24" cy="532" r="9" fill="#B38E5D"/><text x="24" y="532" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">2</text><text x="42" y="536" font-size="13" fill="#6C1D45" font-weight="bold">Auditorio de la UPIIP</text><text x="290" y="536" font-size="12" fill="#58595B">Inauguración, conferencias magistrales, workshops y clausura</text>
+<circle cx="24" cy="558" r="9" fill="#B38E5D"/><text x="24" y="558" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">3</text><text x="42" y="562" font-size="13" fill="#6C1D45" font-weight="bold">Laboratorios de cómputo 1 y 2</text><text x="290" y="562" font-size="12" fill="#58595B">Microtalleres (también en las aulas 12PB a 14PB)</text>
+<text x="10" y="590" font-size="10" fill="#58595B" font-style="italic">Esquema sin escala, elaborado a partir del plano de aulas y gobierno de la UPIIP.</text>
+</svg>

@@ -289,11 +289,19 @@
     (d0.estado === "borrador" ? ' <span class="borrador">' + esc(d0.version || "Versión preliminar") + "</span>" : "");
   if (P.aclaracion) $("ubica-nota").textContent = P.aclaracion;
   pintaDias(); pintaLinea(); pintaUbica(); pintaTalleres(); pintaAgenda(); pintaInfo(); contador();
+  // Mapa de sedes: si no existe, se quita la pestaña
+  var M = P.mapa || {};
+  if (!M.svg && !M.png) { $("tab-mapa").remove(); $("mapa").remove(); }
+  else {
+    if (!M.svg) $("img-mapa").src = M.png;
+    $("desc-mapa").innerHTML = (M.pdf ? '<a class="boton chico" href="' + esc(M.pdf) + '" download>Descargar mapa (PDF)</a>' : "") +
+      (M.png ? '<a class="boton chico claro" href="' + esc(M.png) + '" download>Descargar mapa (imagen PNG)</a>' : "");
+  }
   var activa = C.pestanas(document.querySelector(".pestanas"));
   document.addEventListener("click", function (e) {
     var a = e.target.closest("[data-ir]");
     if (a) { e.preventDefault(); activa(a.getAttribute("data-ir")); window.scrollTo({ top: 0 }); }
   });
   var inicial = location.hash.slice(1);
-  activa(["dia", "ubica", "talleres", "agenda", "info"].indexOf(inicial) >= 0 ? inicial : "dia", true);
+  activa(["dia", "ubica", "talleres", "mapa", "agenda", "info"].indexOf(inicial) >= 0 ? inicial : "dia", true);
 })();

@@ -6,7 +6,7 @@
 <title>Programa · CONASIFE 2026</title>
 <meta name="description" content="Programa interactivo del 1er Congreso Nacional de Sistemas Ferroviarios: horario por día, ubica tu ponencia, talleres y agenda personal.">
 <link rel="icon" href="img/conasife.png?v=4d07eb8a">
-<link rel="stylesheet" href="css/estilo.css?v=86ec4175">
+<link rel="stylesheet" href="css/estilo.css?v=e5c4d087">
 </head>
 <body>
 <div class="franja"></div>
@@ -33,6 +33,7 @@
     <button data-panel="dia">Por día</button>
     <button data-panel="ubica">Ubica tu ponencia</button>
     <button data-panel="talleres">Magistrales y talleres</button>
+    <button data-panel="mapa" id="tab-mapa">Mapa de sedes</button>
     <button data-panel="agenda">Mi agenda <span id="n-fav"></span></button>
     <button data-panel="info">Bienvenida y comités</button>
   </div>
@@ -63,6 +64,12 @@
     <div class="fichas" id="l-micro"></div>
   </div>
 
+  <div class="panel" id="mapa" role="tabpanel" hidden>
+    <p class="intro">Ubicación del Auditorio y de las aulas 11PB a 14PB dentro de la UPIIP, donde se realizan las conferencias magistrales, los workshops y las presentaciones de trabajos.</p>
+    <figure class="mapa"><img id="img-mapa" src="img/mapa_upiip.svg?v=733b72be" alt="Mapa esquemático de la UPIIP con el Auditorio y las aulas 11PB a 14PB"></figure>
+    <div class="buscar" id="desc-mapa"></div>
+  </div>
+
   <div class="panel" id="agenda" role="tabpanel" hidden>
     <p class="intro">Marque con ★ las actividades y ponencias que quiere ver. Se guardan solo en este navegador.</p>
     <div class="buscar">
@@ -89,8 +96,8 @@
     © 2026 Instituto Politécnico Nacional, UPIIP. · Comité organizador: <a href="mailto:conasife@ipn.mx">conasife@ipn.mx</a> · <a href="https://github.com/conasife/conasife-programa-memorias">github.com/conasife</a>
   </div>
 </footer>
-<script src="js/datos.js?v=390905a9"></script>
+<script src="js/datos.js?v=378ad64f"></script>
 <script src="js/comun.js?v=7879fe49"></script>
-<script src="js/programa.js?v=bb103669"></script>
+<script src="js/programa.js?v=367e5b23"></script>
 </body>
 </html>
